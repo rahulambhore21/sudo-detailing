@@ -10,9 +10,8 @@ export function Footer({ onOpenContact }: SectionProps) {
                     SUDO-DETAILS © 2026
                 </span>
                 <div className="flex flex-wrap justify-center gap-8 text-white text-[16px] font-['Clash_Display_Variable:Medium',sans-serif]">
-                    <a href="#" className="hover:text-[#ccc]">Cookie policy</a>
-                    <a href="#" className="hover:text-[#ccc]">Terms of service</a>
-                    <a href="#" className="hover:text-[#ccc]">Privacy policy</a>
+                    <a href="/terms&condition" className="hover:text-[#ccc]">Terms of service</a>
+                    <a href="/policy" className="hover:text-[#ccc]">Privacy policy</a>
                 </div>
             </div>
         </footer>

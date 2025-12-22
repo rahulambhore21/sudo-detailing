@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ContactForm } from './ContactForm';
-import { Navbar, Hero, Services, Showreel, Features, CTA, Footer } from './sections';
+import { Navbar, Hero, Services, Showreel, Features, Footer } from './sections';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -112,7 +112,7 @@ export default function Homepage() {
       <Services />
       <Showreel />
       <Features onOpenContact={openContact} />
-      <CTA onOpenContact={openContact} />
+      <ContactForm mode="inline" />
       <Footer onOpenContact={openContact} />
       <ContactForm open={isContactOpen} onOpenChange={setIsContactOpen} />
     </div>
