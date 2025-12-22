@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { SectionProps } from '../types';
 
 export function Navbar({ onOpenContact }: SectionProps) {
@@ -5,10 +6,14 @@ export function Navbar({ onOpenContact }: SectionProps) {
     <nav className="navbar relative z-50 w-full px-6 py-6 md:px-12 md:py-8 flex items-center justify-between max-w-[1440px] mx-auto opacity-0 translate-y-[-20px]">
         {/* Logo */}
         <div className="flex items-center">
-            <img 
-                src="/logo.png" 
-                alt="LuxureDetails" 
+            <Image
+                src="/logo.png"
+                alt="LuxureDetails"
+                width={160}
+                height={64}
+                sizes="(max-width: 768px) 96px, 160px"
                 className="h-8 md:h-16 w-auto"
+                priority
             />
         </div>
 

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ArrowIconWrapper } from '../shared';
 import { SectionProps } from '../types';
 
@@ -41,7 +42,15 @@ export function Hero({ onOpenContact }: SectionProps) {
 
         {/* Car Image */}
         <div className="hero-car opacity-0 scale-90 w-full max-w-[1400px] mt-12 md:mt-24 relative scale-125 md:scale-100 origin-center">
-             <img src="/herocar.png" alt="Luxury Car" className="w-full h-auto object-contain" />
+             <Image
+                src="/herocar.png"
+                alt="Luxury Car"
+                width={1400}
+                height={700}
+                sizes="(max-width: 768px) 100vw, 90vw"
+                className="w-full h-auto object-contain"
+                priority
+             />
         </div>
     </section>
   );

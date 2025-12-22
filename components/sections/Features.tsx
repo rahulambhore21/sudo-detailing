@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Users, Wrench, Search, Award } from 'lucide-react';
 import { ArrowIconWrapper } from '../shared';
 import { SectionProps } from '../types';
@@ -9,8 +10,15 @@ export function Features({ onOpenContact }: SectionProps) {
                  <h2 className="text-white text-4xl md:text-[48px] leading-tight font-['Clash_Display_Variable:Medium',sans-serif] mb-12">
                      Why Choose Us?
                  </h2>
-                 <div className="rounded-[8px] overflow-hidden h-[300px] md:h-[341px] w-full md:w-[448px]">
-                     <img src="/why.png" alt="Car Detail" className="w-full h-full object-cover" />
+                 <div className="rounded-[8px] overflow-hidden h-[300px] md:h-[341px] w-full md:w-[448px] relative">
+                     <Image
+                        src="/why.png"
+                        alt="Car Detail"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 448px"
+                        className="object-cover"
+                        priority
+                     />
                  </div>
              </div>
              

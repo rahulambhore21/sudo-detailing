@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Arrow } from '../shared';
 
 export function Services() {
@@ -15,17 +16,17 @@ export function Services() {
         {
             title: "PPF (Paint Protection Film)",
             description: "Invisible shield to protect your car from scratches, chips, and road damage.",
-            image: "ppf.png"
+            image: "/ppf.png"
         },
         {
             title: "Rubbing & Polishing",
             description: "Restores shine, removes swirl marks, and enhances paint clarity.",
-            image: "polishing.png"
+            image: "/polishing.png"
         },
         {
             title: "Car Wrapping",
             description: "Customize your car's look with high-quality vinyl wraps in various colors and finishes.",
-            image: "carwrapping.png"
+            image: "/carwrapping.png"
         }
     ];
 
@@ -47,7 +48,13 @@ export function Services() {
                 {services.map((service, index) => (
                     <div key={index} className="service-card opacity-0 translate-y-[30px] flex flex-col gap-3 md:gap-6 group">
                          <div className="aspect-[352/352] w-full relative rounded-[8px] overflow-hidden bg-gray-900">
-                            <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <Image
+                                src={service.image}
+                                alt={service.title}
+                                fill
+                                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 320px"
+                                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
                          </div>
                          <div className="flex flex-col gap-2 md:gap-3">
                             <h3 className="text-white text-[16px] md:text-[24px] font-['Clash_Display_Variable:Medium',sans-serif] leading-tight">{service.title}</h3>
