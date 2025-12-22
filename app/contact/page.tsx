@@ -21,6 +21,7 @@ function page() {
           <div className="space-y-1">
             <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">Call us</p>
             <a href="tel:+917988116056" className="text-sm md:text-base text-white hover:text-zinc-300">+91 79881 16056</a>
+            <br/>
             <a href="mailto:sudodetailing@gmail.com" className="text-sm md:text-base text-white hover:text-zinc-300">sudodetailing@gmail.com</a>
           </div>
         </div>
