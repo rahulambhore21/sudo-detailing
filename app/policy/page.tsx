@@ -46,9 +46,9 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-xl font-semibold">Contact Information</h2>
           <p className="text-zinc-300">
             Sudo Car Detailing<br />
-            Email: [Your Email]<br />
-            Phone: [Your Phone]<br />
-            Location: [Your City / Country]
+            Email: sudodetailing@gmail.com<br />
+            Phone: 7988116056<br />
+            Location: Shaheed Rupen Katyal Marg, HSIDC, Sector 18, Gurugram, 122015, Haryana, India. <br/>
           </p>
         </section>
       </div>

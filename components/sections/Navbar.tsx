@@ -7,12 +7,12 @@ export function Navbar({ onOpenContact }: SectionProps) {
         {/* Logo */}
         <div className="flex items-center">
             <Image
-                src="/logo.png"
+                src="/newlog.png"
                 alt="LuxureDetails"
-                width={160}
-                height={64}
-                sizes="(max-width: 768px) 96px, 160px"
-                className="h-8 md:h-16 w-auto"
+                width={180}
+                height={72}
+                sizes="(max-width: 768px) 112px, 180px"
+                className="h-9 md:h-18 w-auto"
                 priority
             />
         </div>

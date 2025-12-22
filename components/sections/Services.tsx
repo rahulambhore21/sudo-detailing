@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Arrow } from '../shared';
 
 export function Services() {
@@ -46,7 +47,11 @@ export function Services() {
 
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-x-8 md:gap-y-12">
                 {services.map((service, index) => (
-                    <div key={index} className="service-card opacity-0 translate-y-[30px] flex flex-col gap-3 md:gap-6 group">
+                    <Link
+                        key={index}
+                        href="/contact"
+                        className="service-card opacity-0 translate-y-[30px] flex flex-col gap-3 md:gap-6 group"
+                    >
                          <div className="aspect-[352/352] w-full relative rounded-[8px] overflow-hidden bg-gray-900">
                             <Image
                                 src={service.image}
@@ -60,7 +65,7 @@ export function Services() {
                             <h3 className="text-white text-[16px] md:text-[24px] font-['Clash_Display_Variable:Medium',sans-serif] leading-tight">{service.title}</h3>
                             <p className="text-[#999] text-[12px] md:text-[16px] leading-[16px] md:leading-[24px] font-['Clash_Display_Variable:Regular',sans-serif]">{service.description}</p>
                          </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </section>
