@@ -5,10 +5,20 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ContactForm } from './ContactForm';
 import { Navbar, Hero, Services, Showreel, Features, Footer } from './sections';
+import { LogoLoop } from './LogoLoop';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Homepage() {
+
+    const logos = [
+    { src: "/img/logo1.png", alt: "Partner 1", width: 120, height: 60 },
+    { src: "/img/logo2.png", alt: "Partner 2", width: 120, height: 60 },
+    { src: "/img/logo3.png", alt: "Partner 3", width: 120, height: 60 },
+    { src: "/img/logo4.png", alt: "Partner 4", width: 120, height: 60 },
+    { src: "/img/logo5.png", alt: "Partner 5", width: 120, height: 60 },
+    { src: "/img/logo6.png", alt: "Partner 6", width: 120, height: 60 },
+  ];
   const container = useRef(null);
   const [isContactOpen, setIsContactOpen] = useState(false);
 
@@ -109,6 +119,21 @@ export default function Homepage() {
     <div ref={container} className="bg-black min-h-screen w-full text-white font-sans overflow-x-hidden selection:bg-white/20">
       <Navbar onOpenContact={openContact} />
       <Hero onOpenContact={openContact} />
+       <h2 className="text-3xl font-bold text-center text-white mb-12">
+            Trusted by Leading Companies
+          </h2>
+       <LogoLoop
+            logos={logos}
+            speed={80}
+            direction="left"
+            logoHeight={80}
+            gap={48}
+            pauseOnHover={true}
+            fadeOut={true}
+            scaleOnHover={true}
+            ariaLabel="Our trusted partners and clients"
+            className="max-w-6xl mx-auto"
+          />
       <Services />
       <Showreel />
       <Features onOpenContact={openContact} />

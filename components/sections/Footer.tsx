@@ -13,11 +13,24 @@ export function Footer({ onOpenContact }: SectionProps) {
                     <a href="tel:+917988116056" className="hover:text-[#ccc]">+91 79881 16056</a>
                     <a href="mailto:sudodetailing@gmail.com" className="hover:text-[#ccc] block">sudodetailing@gmail.com</a>
                 </div>
+                <div className="text-white text-[16px] font-['Clash_Display_Variable:Medium',sans-serif] space-y-2">
+                    <p className="text-[#ccc] uppercase tracking-[0.2em] text-[12px]">Quick Links</p>
+                    <div className="flex flex-col space-y-2">
+                        <a href="#home" className="hover:text-[#ccc]">Home</a>
+                        <a href="#features" className="hover:text-[#ccc]">Features</a>
+                        <a href="#services" className="hover:text-[#ccc]">Services</a>
+                    </div>
+                </div>
             </div>
             <div className=" border-[#333] pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
-                <span className="text-white text-[16px] font-['Clash_Display_Variable:Medium',sans-serif] hidden md:block">
-                    SUDO-DETAILS © 2026
-                </span>
+                <div className="flex flex-col items-center md:items-start gap-2">
+                    <span className="text-white text-[16px] font-['Clash_Display_Variable:Medium',sans-serif] hidden md:block">
+                        SUDO-DETAILS © 2026
+                    </span>
+                    <span className="text-[#999] text-[14px] font-['Clash_Display_Variable:Medium',sans-serif]">
+                        Developed and managed by <a href="https://admarktech.in" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#ccc] underline">ADMARK</a>
+                    </span>
+                </div>
                 <div className="flex flex-wrap justify-center gap-8 text-white text-[16px] font-['Clash_Display_Variable:Medium',sans-serif]">
                     <a href="/terms&condition" className="hover:text-[#ccc]">Terms of service</a>
                     <a href="/policy" className="hover:text-[#ccc]">Privacy policy</a>
